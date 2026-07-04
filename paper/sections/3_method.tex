@@ -1,0 +1,113 @@
+\section{Trace-Driven Virtual PIM Evaluation}
+\label{sec:method}
+
+\subsection{Problem Framing}
+
+We study virtual PIM offloading during autoregressive LLM decoding. Let a decode trace be a sequence of region-level records
+\[
+\mathcal{T} = \{r_t\}_{t=1}^{T},
+\]
+where each record contains a region identity, measured latency, estimated bytes moved, arithmetic intensity, context length, batch size, and auxiliary metadata derived from the runtime. We do not attempt to model a full physical PIM system. Instead, we use these records to evaluate a virtual decision problem: for each decode region, should execution remain on the GPU or be offloaded to a hypothetical PIM backend under a prior-work-grounded latency model?
+
+\subsection{Trace Collection}
+
+Our framework instruments real decoding runs from open-source runtimes and collects region-level records for attention and MLP-dominated portions of each decode step. Each trace record stores:
+\begin{itemize}
+\item measured latency,
+\item estimated floating-point work and bytes moved,
+\item current context length and batch size,
+\item runtime-derived KV-related proxies such as $\kv$ bytes and memory pressure.
+\end{itemize}
+This design gives us a runtime-grounded description of decode behavior without requiring proprietary serving stacks or custom hardware counters.
+
+\subsection{Virtual PIM Backend}
+
+The virtual backend is intentionally transparent. It uses a prior-work-grounded cost model rather than a cycle-accurate microarchitecture. The GPU-side assumptions are anchored to a roofline-style A100 reference, while the PIM side is parameterized by bandwidth, compute throughput, and fixed orchestration overheads. This makes the backend suitable for trace-grounded replay, signal comparison, and sensitivity analysis, but not for direct hardware-speedup claims.
+
+The default parameters are deliberately conservative in how they treat non-attention benefit. The virtual PIM bandwidth is set above the GPU roofline anchor to encode a memory-centric advantage, but the virtual PIM throughput is kept far below GPU-class compute throughput so that compute-dominant regions do not inherit unrealistic gains. Likewise, the attention bandwidth bonus is meant only to reflect stronger long-context KV pressure, while the MLP and non-attention penalties are explicitly chosen to avoid overestimating benefit outside attention-heavy regions.
+
+For each trace record $r$, the GPU latency estimate is
+\[
+L_{\mathrm{gpu}}(r)=
+\begin{cases}
+\ell_{\mathrm{trace}}(r), & \text{if measured region latency is available}, \\
+\max\!\left(\frac{\mathrm{FLOPs}(r)}{\Theta_{\mathrm{gpu}}}, \frac{\mathrm{Bytes}(r)}{B_{\mathrm{gpu}}}\right), & \text{otherwise}.
+\end{cases}
+\]
+The virtual PIM latency uses the trace-grounded GPU latency as an anchor and then rescales its compute- and memory-dominant shares:
+\[
+L_{\mathrm{pim}}(r)=
+\max\!\left(
+L_{\mathrm{gpu}}(r)\cdot s_c(r)\cdot \frac{\Theta_{\mathrm{gpu}}}{\Theta_{\mathrm{pim}}^{\mathrm{eff}}(r)},
+L_{\mathrm{gpu}}(r)\cdot s_m(r)\cdot \frac{B_{\mathrm{gpu}}}{B_{\mathrm{pim}}^{\mathrm{eff}}(r)}
+\right)
+\;+\;
+\tau_{\mathrm{transfer}}
+\;+\;
+\tau_{\mathrm{sync}},
+\]
+where $s_c(r)$ and $s_m(r)$ are the compute- and memory-share terms derived from the GPU roofline decomposition. For attention regions, $B_{\mathrm{pim}}^{\mathrm{eff}}(r)$ receives a context-scaled bandwidth bonus; for non-attention and MLP regions, $\Theta_{\mathrm{pim}}^{\mathrm{eff}}(r)$ is reduced by fixed penalties to reflect their weaker fit to memory-centric execution. The default parameters and provenance split are summarized in \Cref{tab:backend-measured-modeled,tab:backend-params}.
+
+\input{tables/final_tables/backend_measured_vs_modeled.tex}
+\input{tables/final_tables/backend_parameters.tex}
+
+This paper treats the virtual backend as a methodological enabler rather than as the main novelty. All central claims are therefore phrased in terms of regime characterization and relative policy behavior, not exact hardware performance.
+
+\subsection{Policies}
+
+We evaluate the following policy families:
+\begin{itemize}
+\item \textbf{GPU-only}: never offload.
+\item \textbf{Static attention}: offload all attention regions.
+\item \textbf{Online predictor}: a lightweight dynamic predictor using runtime features.
+\item \textbf{Adaptive feature}: a realistic feature-based policy using context, bytes moved, arithmetic intensity, latency, and region bias.
+\item \textbf{KV regime}: a realistic policy that augments runtime features with explicit KV-related signals such as estimated $\kv$ bytes, $\kv$ bytes per token, and memory pressure proxy.
+\item \textbf{Oracle}: an upper bound that chooses the lower-cost device for each record under the virtual backend.
+\end{itemize}
+
+The key comparison in this paper is not between a sophisticated learned scheduler and a naive baseline, but between different kinds of realistic decision signals. We use this comparison to test whether static attention rules are sufficient, whether context length alone is already a strong coarse cue, and whether explicit KV-related signals provide complementary information near the regime boundary.
+
+\subsection{Practical Two-Stage Policy}
+
+The empirical findings in this paper naturally suggest a simple practical policy: use context as a coarse gate, use attention labeling only to generate candidates, refine the decision with KV-related signals, and add hysteresis to avoid rapid oscillation. We instantiate this idea as \texttt{context\_kv\_hysteresis}, which keeps separate on/off thresholds for KV bytes, KV bytes per token, memory-pressure proxy, and an aggregate boundary score.
+
+\begin{algorithm}[t]
+\caption{Context-Gated KV-Refined Hysteresis Policy}
+\label{alg:context-kv-hysteresis}
+\begin{algorithmic}[1]
+\REQUIRE Region record $r_t$, previous state $a_{t-1}\in\{\texttt{gpu},\texttt{pim}\}$
+\IF{$r_t$ is not an attention-region candidate}
+    \RETURN \texttt{gpu}
+\ENDIF
+\IF{$\mathrm{context}(r_t) < C_{\min}$}
+    \RETURN \texttt{gpu}
+\ENDIF
+\STATE Compute boundary score $s_t$ from context length, KV bytes, KV bytes/token, and memory-pressure proxy
+\IF{$a_{t-1}=\texttt{gpu}$}
+    \IF{$s_t \ge S_{\mathrm{on}}$ and KV-related on-thresholds are satisfied}
+        \RETURN \texttt{pim}
+    \ELSE
+        \RETURN \texttt{gpu}
+    \ENDIF
+\ELSE
+    \IF{$s_t \ge S_{\mathrm{off}}$ and KV-related off-thresholds are satisfied}
+        \RETURN \texttt{pim}
+    \ELSE
+        \RETURN \texttt{gpu}
+    \ENDIF
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+We do not claim that this policy is globally optimal or fully calibrated. Its thresholds are fixed conservatively to prioritize false-positive control and lower switching rather than maximum average speedup. This makes it a practical translation of the paper's characterization results rather than a learned scheduler.
+
+\subsection{Claims and Evaluation Logic}
+
+Our experimental logic follows three questions.
+\begin{enumerate}
+\item \textbf{Regime characterization}: when does realistic dynamic offload show positive value, and when does it fail?
+\item \textbf{Predictive signals}: is the transition more consistent with context alone, attention share, or KV-related pressure signals?
+\item \textbf{Decision implication}: do static attention rules and generic realistic heuristics over- or under-predict early-positive cases, and can KV-aware features refine the boundary?
+\end{enumerate}
+
+These questions motivate the main figures and tables in the paper. \Cref{fig:context-transition} addresses the first question, \Cref{fig:kv-pressure} and \Cref{fig:decision-signal-study} address the second, and \Cref{fig:policy-comparison} provides a focused case-study view for the third.

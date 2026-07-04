@@ -1,0 +1,56 @@
+% Final paper package snippets
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{final/figures/paper_backbone_context_transition.pdf}
+    \caption{Context-driven regime transition across modern instruct families.}
+    \label{fig:context-transition}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{final/figures/paper_backbone_kv_pressure_vs_speedup.pdf}
+    \caption{KV-related memory pressure tracks positive offload regimes.}
+    \label{fig:kv-pressure}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{final/figures/paper_policy_comparison.pdf}
+    \caption{Static and generic realistic policies miss some early-positive modern-family cases, while KV-aware detection recovers them.}
+    \label{fig:policy-comparison}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{final/figures/paper_negative_cases.pdf}
+    \caption{Distributional negative-result evidence.}
+    \label{fig:negative-cases}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{final/figures/paper_decision_signal_study.pdf}
+    \caption{Held-out decision-signal comparison for workload-level positive-regime detection under the fixed virtual backend definition.}
+    \label{fig:decision-signal-study}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{final/figures/paper_same_context_family.pdf}
+    \caption{Fixed-context cross-family comparison at $\ctx=256$ showing that delayed-onset and early-positive families can differ in KV-byte scale and online speedup even at the same prompt length.}
+    \label{fig:same-context-family}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{final/figures/paper_backend_validation.pdf}
+    \caption{Appendix robustness view: backend preset stability and label-threshold sensitivity.}
+    \label{fig:backend-validation}
+\end{figure}
+
+\input{final/tables/main_results_table.tex}
+\input{final/tables/family_onset_table.tex}
+\input{final/tables/backend_measured_vs_modeled.tex}
+\input{final/tables/backend_parameters.tex}
+\input{final/tables/practical_policy_table.tex}
+

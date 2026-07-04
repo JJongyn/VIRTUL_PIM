@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering
+\caption{Virtual backend inputs grouped by provenance.}
+\label{tab:backend-measured-modeled}
+\begin{tabular}{p{0.22\linewidth}p{0.37\linewidth}p{0.27\linewidth}}
+\toprule
+Category & Fields & Source / Interpretation \\
+\midrule
+Trace-measured & region label, measured latency, context length, batch size & Directly observed in the collected decode traces \\
+Trace-derived & bytes moved, FLOPs, arithmetic intensity, estimated KV bytes, KV bytes/token, memory-pressure proxy & Derived from runtime metadata and trace-side estimators \\
+Modeled only & roofline compute/memory shares, effective PIM bandwidth/throughput modifiers, transfer/sync overheads, estimated PIM latency & Virtual replay assumptions used only for what-if comparison \\
+\bottomrule
+\end{tabular}
+\end{table}

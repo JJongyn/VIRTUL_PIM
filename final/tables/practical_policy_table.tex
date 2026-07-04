@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Practical policy trade-offs over the 34-workload evaluation set. The added context+KV ablation isolates hysteresis itself: under the current trace granularity, hysteresis does not materially change aggregate behavior, so the practical gain comes primarily from conservative context+KV gating rather than from hysteresis alone.}
+\label{tab:practical-policy}
+\begin{tabular}{lccccc}
+\toprule
+Policy & Speedup & Oracle Regret & FP Rate & Missed-Pos. & Switches /100 \\
+\midrule
+GPU-only & 1.000 & 1.000 & 0.000 & 1.000 & 0.0 \\
+Static attention & 1.181 & 0.359 & 0.000 & 0.500 & 0.0 \\
+Context threshold & 1.132 & 0.557 & 0.000 & 0.662 & 0.0 \\
+Adaptive feature & 1.132 & 0.557 & 0.000 & 0.664 & 0.7 \\
+KV regime & 1.122 & 0.573 & 0.000 & 0.662 & 0.0 \\
+Context+KV & 1.112 & 0.612 & 0.000 & 0.694 & 0.2 \\
+Context+KV+hyst. & 1.112 & 0.612 & 0.000 & 0.694 & 0.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

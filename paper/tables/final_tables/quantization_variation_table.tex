@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Controlled quantization variation on representative modern families. Both the delayed-onset \texttt{Qwen2.5-1.5B} family and the early-positive \texttt{SmolLM2-1.7B} family preserve their coarse regime labels between 4-bit and 8-bit runs, which reduces the risk that the main regime story is purely a 4-bit artifact.}
+\label{tab:quantization-variation}
+\begin{tabular}{lcccccc}
+\toprule
+Model & Quant. & Context & Online & KVRegime & Oracle & Regime \\
+\midrule
+Qwen2.5-1.5B & 4-bit & 256 & 1.000 & 1.000 & 1.274 & weak \\
+Qwen2.5-1.5B & 8-bit & 256 & 1.000 & 1.000 & 1.277 & weak \\
+Qwen2.5-1.5B & 4-bit & 768 & 1.195 & 1.195 & 1.337 & positive \\
+Qwen2.5-1.5B & 8-bit & 768 & 1.208 & 1.208 & 1.343 & positive \\
+SmolLM2-1.7B & 4-bit & 256 & 1.150 & 1.150 & 1.276 & positive \\
+SmolLM2-1.7B & 8-bit & 256 & 1.151 & 1.151 & 1.276 & positive \\
+\bottomrule
+\end{tabular}
+\end{table}

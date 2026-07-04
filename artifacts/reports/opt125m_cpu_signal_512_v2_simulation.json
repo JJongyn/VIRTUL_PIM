@@ -1,0 +1,55 @@
+{
+  "device": "cpu",
+  "max_new_tokens": 32,
+  "min_offload_bytes": 32768.0,
+  "model": "facebook/opt-125m",
+  "prompt_tokens_target": 512,
+  "results": [
+    {
+      "baseline_latency_ms": 11572.137389681302,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "gpu_only",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 11572.137389681302,
+      "total_records": 64
+    },
+    {
+      "baseline_latency_ms": 11572.137389681302,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 0.6224230286395853,
+      "policy_name": "static_attention",
+      "speedup_vs_gpu_only": 1.2804777798600468,
+      "total_latency_ms": 9037.359001220708,
+      "total_records": 64
+    },
+    {
+      "baseline_latency_ms": 11572.137389681302,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "threshold",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 11572.137389681302,
+      "total_records": 64
+    },
+    {
+      "baseline_latency_ms": 11572.137389681302,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 0.6224230286395853,
+      "policy_name": "online_predictor",
+      "speedup_vs_gpu_only": 1.2804777798600468,
+      "total_latency_ms": 9037.359001220708,
+      "total_records": 64
+    },
+    {
+      "baseline_latency_ms": 11572.137389681302,
+      "dispatches_to_pim": 64,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "oracle",
+      "speedup_vs_gpu_only": 1.5430132318193126,
+      "total_latency_ms": 7499.700683731015,
+      "total_records": 64
+    }
+  ],
+  "trace": "artifacts/traces/opt125m_cpu_signal_512_v2.jsonl"
+}

@@ -1,0 +1,49 @@
+{
+  "contexts": [
+    256,
+    512,
+    768
+  ],
+  "model": "facebook/opt-125m",
+  "rows": [
+    {
+      "attention_share": 0.6528136367299348,
+      "context": 256,
+      "gpu_only_speedup": 1.0,
+      "mlp_share": 0.3471863632700653,
+      "model": "facebook/opt-125m",
+      "online_gap_closed": 0.0,
+      "online_predictor_speedup": 1.0,
+      "oracle_speedup": 1.5427900202464213,
+      "simulation": "artifacts/reports/facebook_opt_125m_ctx256_simulation.json",
+      "static_attention_speedup": 1.298220722579175,
+      "trace_summary": "artifacts/reports/facebook_opt_125m_ctx256_trace_summary.json"
+    },
+    {
+      "attention_share": 0.6670366748571693,
+      "context": 512,
+      "gpu_only_speedup": 1.0,
+      "mlp_share": 0.33296332514283067,
+      "model": "facebook/opt-125m",
+      "online_gap_closed": 0.66710241087969,
+      "online_predictor_speedup": 1.3068192656208328,
+      "oracle_speedup": 1.5430784960369757,
+      "simulation": "artifacts/reports/facebook_opt_125m_ctx512_simulation.json",
+      "static_attention_speedup": 1.3068192656208328,
+      "trace_summary": "artifacts/reports/facebook_opt_125m_ctx512_trace_summary.json"
+    },
+    {
+      "attention_share": 0.6319444831847685,
+      "context": 768,
+      "gpu_only_speedup": 1.0,
+      "mlp_share": 0.3680555168152315,
+      "model": "facebook/opt-125m",
+      "online_gap_closed": 0.6319890089560468,
+      "online_predictor_speedup": 1.2860706376696842,
+      "oracle_speedup": 1.543125480781299,
+      "simulation": "artifacts/reports/facebook_opt_125m_ctx768_simulation.json",
+      "static_attention_speedup": 1.2860706376696842,
+      "trace_summary": "artifacts/reports/facebook_opt_125m_ctx768_trace_summary.json"
+    }
+  ]
+}

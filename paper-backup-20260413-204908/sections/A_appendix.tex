@@ -1,0 +1,20 @@
+\section{Additional Details}
+
+\subsection{Framework Overview}
+
+The end-to-end workflow is: real decode run $\rightarrow$ trace adapter $\rightarrow$ region-level trace $\rightarrow$ virtual PIM replay $\rightarrow$ policy comparison. The framework deliberately separates runtime measurement from the virtual backend so that different cost-model settings can be replayed on the same collected traces.
+
+\subsection{Additional Tables}
+
+Table~\ref{tab:main-modern-results} summarizes representative modern-family results, and Table~\ref{tab:family-onset} summarizes the first positive context by family.
+
+\input{tables/final_tables/main_results_table.tex}
+\input{tables/final_tables/family_onset_table.tex}
+
+\subsection{Robustness Notes}
+
+The sensitivity study changes PIM bandwidth and latency presets while leaving the decode traces fixed. The most robust conclusion is the long-context positive-regime story. Borderline early-onset short-context points are more parameter-sensitive, which is why the main paper phrases them as family-dependent onset evidence rather than as universal short-context gains.
+
+\subsection{Reproducibility}
+
+All main figures in the paper are generated from reproducible scripts and stored under the project \texttt{final/} package. The trace schema, simulator, cost model, and policy implementations are contained in the repository. The paper focuses on runtime-grounded virtual replay rather than private serving traces or proprietary hardware measurements.

@@ -1,0 +1,93 @@
+{
+  "batch_size": 1,
+  "device": "cuda:0",
+  "max_new_tokens": 16,
+  "min_offload_bytes": 262144,
+  "model": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+  "prompt_tokens_target": 1024,
+  "quantization": "none",
+  "results": [
+    {
+      "baseline_latency_ms": 31221.22335410677,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "gpu_only",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 31221.22335410677,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 31221.22335410677,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6493064334795615,
+      "policy_name": "static_attention",
+      "speedup_vs_gpu_only": 1.2067827378335225,
+      "total_latency_ms": 25871.45339032334,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 31221.22335410677,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "threshold",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 31221.22335410677,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 31221.22335410677,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6493064334795615,
+      "policy_name": "online_predictor",
+      "speedup_vs_gpu_only": 1.2067827378335225,
+      "total_latency_ms": 25871.45339032334,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 31221.22335410677,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6493064334795615,
+      "policy_name": "adaptive_feature",
+      "speedup_vs_gpu_only": 1.2067827378335225,
+      "total_latency_ms": 25871.45339032334,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 31221.22335410677,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6493064334795615,
+      "policy_name": "kv_regime",
+      "speedup_vs_gpu_only": 1.2067827378335225,
+      "total_latency_ms": 25871.45339032334,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 31221.22335410677,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6493064334795615,
+      "policy_name": "adaptive_family",
+      "speedup_vs_gpu_only": 1.2067827378335225,
+      "total_latency_ms": 25871.45339032334,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 31221.22335410677,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "adaptive_score",
+      "speedup_vs_gpu_only": 1.3585066933735335,
+      "total_latency_ms": 22982.016582175365,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 31221.22335410677,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "oracle",
+      "speedup_vs_gpu_only": 1.3585066933735335,
+      "total_latency_ms": 22982.016582175365,
+      "total_records": 32
+    }
+  ],
+  "trace": "/mnt/2TB_SSD/jongyun_2026/PAPI/artifacts/traces/unsloth_qwen3_8b_unsloth_bnb_4bit_none_ctx1024_bs1_densectx.jsonl"
+}

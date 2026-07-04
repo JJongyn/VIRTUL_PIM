@@ -1,0 +1,94 @@
+{
+  "config": {
+    "min_offload_bytes": 32768.0,
+    "pim_bw_gbps": 2000.0,
+    "pim_tflops": 14.0,
+    "sync_overhead_ms": 0.015,
+    "transfer_overhead_ms": 0.03
+  },
+  "num_records": 32,
+  "results": [
+    {
+      "baseline_latency_ms": 3559.5756912371144,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "gpu_only",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 3559.5756912371144,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3559.5756912371144,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6831668925912003,
+      "policy_name": "static_attention",
+      "speedup_vs_gpu_only": 1.0387467924125628,
+      "total_latency_ms": 3426.7982507746165,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3559.5756912371144,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "threshold",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 3559.5756912371144,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3559.5756912371144,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "online_predictor",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 3559.5756912371144,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3559.5756912371144,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "adaptive_feature",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 3559.5756912371144,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3559.5756912371144,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "kv_regime",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 3559.5756912371144,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3559.5756912371144,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "adaptive_family",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 3559.5756912371144,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3559.5756912371144,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "adaptive_score",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 3559.5756912371144,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3559.5756912371144,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "oracle",
+      "speedup_vs_gpu_only": 1.0577542611476407,
+      "total_latency_ms": 3365.21990218697,
+      "total_records": 32
+    }
+  ],
+  "trace": "artifacts/traces/gpt2_none_ctx256_bs1_kvmech.jsonl"
+}

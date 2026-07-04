@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Default virtual backend parameters, role, and provenance.}
+\label{tab:backend-params}
+\begin{tabular}{p{0.28\linewidth}p{0.13\linewidth}p{0.24\linewidth}p{0.24\linewidth}}
+\toprule
+Parameter & Default & Role & Provenance \\
+\midrule
+GPU peak BW & 1935 GB/s & Roofline anchor for memory time & Prior-work A100-style roofline anchor \\
+GPU peak throughput & 312 TFLOP/s & Roofline anchor for compute time & Prior-work A100-style roofline anchor \\
+PIM peak BW & 2400 GB/s & Baseline virtual PIM memory rate & Memory-centric default: modestly above GPU BW to encode bandwidth advantage without assuming equal compute \\
+PIM peak throughput & 18 TFLOP/s & Baseline virtual PIM compute rate & Conservative low-throughput default to avoid overstating compute-heavy gains \\
+Transfer overhead & 0.020 ms & Per-dispatch orchestration cost & Conservative midpoint varied again in preset sensitivity \\
+Sync overhead & 0.010 ms & Per-dispatch synchronization cost & Conservative midpoint varied again in preset sensitivity \\
+Attention BW bonus & 0.20 & Long-context attention memory modifier & Qualitative prior reflecting stronger KV pressure at long context \\
+FC parallelism penalty & 0.25 & MLP parallelism penalty & Deliberate penalty to avoid overstating non-attention and MLP benefit \\
+Non-attention penalty & 0.10 & Throughput penalty outside attention & Deliberate penalty to keep non-attention gains conservative \\
+\bottomrule
+\end{tabular}
+\end{table}

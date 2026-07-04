@@ -1,0 +1,29 @@
+{
+  "batch_max": 2,
+  "batch_min": 2,
+  "context_max": 539,
+  "context_min": 524,
+  "num_records": 32,
+  "num_steps": 16,
+  "regions": [
+    {
+      "arithmetic_intensity": 0.9981220657276996,
+      "bytes_moved": 52346880.0,
+      "count": 16,
+      "flops": 52248576.0,
+      "latency_ms": 3517.7772192982957,
+      "latency_share": 0.8569093166000885,
+      "region": "attention"
+    },
+    {
+      "arithmetic_intensity": 1.996101364522417,
+      "bytes_moved": 151289856.0,
+      "count": 16,
+      "flops": 301989888.0,
+      "latency_ms": 587.4147200956941,
+      "latency_share": 0.1430906833999115,
+      "region": "mlp"
+    }
+  ],
+  "total_latency_ms": 4105.19193939399
+}

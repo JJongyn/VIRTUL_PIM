@@ -1,0 +1,65 @@
+{
+  "batch_size": 1,
+  "device": "cuda:0",
+  "max_new_tokens": 16,
+  "min_offload_bytes": 32768.0,
+  "model": "gpt2",
+  "prompt_tokens_target": 768,
+  "results": [
+    {
+      "baseline_latency_ms": 3756.7219581105746,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "gpu_only",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 3756.7219581105746,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3756.7219581105746,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.5720381306007016,
+      "policy_name": "static_attention",
+      "speedup_vs_gpu_only": 1.161702609041029,
+      "total_latency_ms": 3233.8069389477414,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3756.7219581105746,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "threshold",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 3756.7219581105746,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3756.7219581105746,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.5720381306007016,
+      "policy_name": "online_predictor",
+      "speedup_vs_gpu_only": 1.161702609041029,
+      "total_latency_ms": 3233.8069389477414,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3756.7219581105746,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "adaptive_score",
+      "speedup_vs_gpu_only": 1.3215814782275817,
+      "total_latency_ms": 2842.595799048912,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 3756.7219581105746,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "oracle",
+      "speedup_vs_gpu_only": 1.3215814782275817,
+      "total_latency_ms": 2842.595799048912,
+      "total_records": 32
+    }
+  ],
+  "trace": "artifacts/traces/gpt2_gpu_ctx768_bs1.jsonl"
+}

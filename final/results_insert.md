@@ -1,0 +1,6 @@
+# Results Insert
+
+Our results show a consistent weak-signal versus positive-signal split. Short-context decoding does not automatically benefit from virtual PIM offload, which appears clearly in the workload-level gain distribution and the context-wise positive-fraction curves. In contrast, denser context sweeps reveal a family-dependent regime transition: `Qwen2.5-1.5B` transitions later (`256 -> 384`), while `Qwen3-8B`, `SmolLM2-1.7B`, and `Phi-3.5-mini` enter the positive regime earlier. This makes context length the clearest coarse regime-entry axis in our study, while also showing that onset is not universal across families.
+
+The mechanism evidence is predictive rather than causal. Across focused GPU studies, higher memory-pressure proxy values align with positive online speedup more directly than attention share alone, and held-out workload classification shows that attention-only cues are too permissive while all-feature detectors modestly improve boundary detection when coarse context cues are withheld. Taken together, these results support a narrower claim than a static attention-offload story: virtual PIM value emerges in context-sensitive regimes, the observed boundary is consistent with KV-cache-related pressure, and realistic decision support should not rely on attention labels alone.
+

@@ -1,0 +1,120 @@
+{
+  "batches": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "contexts": [
+    256,
+    768
+  ],
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "quantization": "4bit",
+  "rows": [
+    {
+      "adaptive_feature_speedup": 1.0,
+      "attention_share": 0.5416932049621602,
+      "batch_size": 1,
+      "context": 256,
+      "kv_regime_speedup": 1.0,
+      "mean_kv_bytes_est": 1655808.0,
+      "mean_memory_pressure_proxy": 0.9963020681342138,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.2747034796202863,
+      "simulation_report": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs1_batchctl_simulation.json",
+      "trace_summary": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs1_batchctl_trace_summary.json"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "attention_share": 0.5236779646229811,
+      "batch_size": 2,
+      "context": 256,
+      "kv_regime_speedup": 1.1396367354819228,
+      "mean_kv_bytes_est": 3311616.0,
+      "mean_memory_pressure_proxy": 0.9963020681342138,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.2735401127783539,
+      "simulation_report": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs2_batchctl_simulation.json",
+      "trace_summary": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs2_batchctl_trace_summary.json"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "attention_share": 0.5240359100153423,
+      "batch_size": 4,
+      "context": 256,
+      "kv_regime_speedup": 1.1397391172537736,
+      "mean_kv_bytes_est": 6623232.0,
+      "mean_memory_pressure_proxy": 0.9963020681342138,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.27355487196395,
+      "simulation_report": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs4_batchctl_simulation.json",
+      "trace_summary": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs4_batchctl_trace_summary.json"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "attention_share": 0.5235527084696594,
+      "batch_size": 8,
+      "context": 256,
+      "kv_regime_speedup": 1.1395851012622917,
+      "mean_kv_bytes_est": 13246464.0,
+      "mean_memory_pressure_proxy": 0.9963020681342138,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.1395851012622917,
+      "simulation_report": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs8_batchctl_simulation.json",
+      "trace_summary": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs8_batchctl_trace_summary.json"
+    },
+    {
+      "adaptive_feature_speedup": 1.1940853265510565,
+      "attention_share": 0.5389108177514613,
+      "batch_size": 1,
+      "context": 768,
+      "kv_regime_speedup": 1.1940853265510565,
+      "mean_kv_bytes_est": 4862976.0,
+      "mean_memory_pressure_proxy": 0.998738127650979,
+      "online_speedup": 1.1940853265510565,
+      "oracle_speedup": 1.3366198613883333,
+      "simulation_report": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs1_batchctl_simulation.json",
+      "trace_summary": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs1_batchctl_trace_summary.json"
+    },
+    {
+      "adaptive_feature_speedup": 1.1881503351583438,
+      "attention_share": 0.5250294554930266,
+      "batch_size": 2,
+      "context": 768,
+      "kv_regime_speedup": 1.1881503351583438,
+      "mean_kv_bytes_est": 9725952.0,
+      "mean_memory_pressure_proxy": 0.998738127650979,
+      "online_speedup": 1.1881503351583438,
+      "oracle_speedup": 1.3339623234226723,
+      "simulation_report": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs2_batchctl_simulation.json",
+      "trace_summary": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs2_batchctl_trace_summary.json"
+    },
+    {
+      "adaptive_feature_speedup": 1.1920660591420664,
+      "attention_share": 0.5340342363844346,
+      "batch_size": 4,
+      "context": 768,
+      "kv_regime_speedup": 1.1920660591420664,
+      "mean_kv_bytes_est": 19451904.0,
+      "mean_memory_pressure_proxy": 0.998738127650979,
+      "online_speedup": 1.1920660591420664,
+      "oracle_speedup": 1.335762644512462,
+      "simulation_report": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs4_batchctl_simulation.json",
+      "trace_summary": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs4_batchctl_trace_summary.json"
+    },
+    {
+      "adaptive_feature_speedup": 1.1858681068203814,
+      "attention_share": 0.5197125070252006,
+      "batch_size": 8,
+      "context": 768,
+      "kv_regime_speedup": 1.1858681068203814,
+      "mean_kv_bytes_est": 38903808.0,
+      "mean_memory_pressure_proxy": 0.998738127650979,
+      "online_speedup": 1.1858681068203814,
+      "oracle_speedup": 1.1858681068203814,
+      "simulation_report": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs8_batchctl_simulation.json",
+      "trace_summary": "artifacts/reports/qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs8_batchctl_trace_summary.json"
+    }
+  ]
+}

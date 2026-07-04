@@ -1,0 +1,63 @@
+{
+  "contexts": [
+    256,
+    512,
+    768,
+    960
+  ],
+  "model": "gpt2",
+  "rows": [
+    {
+      "attention_share": 0.4256816256872712,
+      "context": 256,
+      "gpu_only_speedup": 1.0,
+      "mlp_share": 0.5743183743127288,
+      "model": "gpt2",
+      "online_gap_closed": 0.0,
+      "online_predictor_speedup": 1.0,
+      "oracle_speedup": 1.5429608678638025,
+      "simulation": "artifacts/reports/gpt2_ctx256_simulation.json",
+      "static_attention_speedup": 1.1761681756607927,
+      "trace_summary": "artifacts/reports/gpt2_ctx256_trace_summary.json"
+    },
+    {
+      "attention_share": 0.453312756538953,
+      "context": 512,
+      "gpu_only_speedup": 1.0,
+      "mlp_share": 0.546687243461047,
+      "model": "gpt2",
+      "online_gap_closed": 0.4532908971357172,
+      "online_predictor_speedup": 1.189798402817184,
+      "oracle_speedup": 1.5430159560541161,
+      "simulation": "artifacts/reports/gpt2_ctx512_simulation.json",
+      "static_attention_speedup": 1.189798402817184,
+      "trace_summary": "artifacts/reports/gpt2_ctx512_trace_summary.json"
+    },
+    {
+      "attention_share": 0.44871417577605477,
+      "context": 768,
+      "gpu_only_speedup": 1.0,
+      "mlp_share": 0.5512858242239452,
+      "model": "gpt2",
+      "online_gap_closed": 0.4486904510662181,
+      "online_predictor_speedup": 1.1875121938097029,
+      "oracle_speedup": 1.5430206556943589,
+      "simulation": "artifacts/reports/gpt2_ctx768_simulation.json",
+      "static_attention_speedup": 1.1875121938097029,
+      "trace_summary": "artifacts/reports/gpt2_ctx768_trace_summary.json"
+    },
+    {
+      "attention_share": 0.43424038963435113,
+      "context": 960,
+      "gpu_only_speedup": 1.0,
+      "mlp_share": 0.5657596103656489,
+      "model": "gpt2",
+      "online_gap_closed": 0.43421298574841555,
+      "online_predictor_speedup": 1.1803803870175584,
+      "oracle_speedup": 1.543059074398388,
+      "simulation": "artifacts/reports/gpt2_ctx960_simulation.json",
+      "static_attention_speedup": 1.1803803870175584,
+      "trace_summary": "artifacts/reports/gpt2_ctx960_trace_summary.json"
+    }
+  ]
+}

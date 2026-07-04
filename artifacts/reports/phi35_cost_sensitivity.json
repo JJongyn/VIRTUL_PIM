@@ -1,0 +1,52 @@
+{
+  "rows": [
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.0460887904131224,
+      "online_speedup": 1.0460887904131224,
+      "oracle_speedup": 1.0634303496566289,
+      "preset": "conservative",
+      "trace": "microsoft_phi_3_5_mini_instruct_4bit_ctx256_bs1_phi35_probe.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.140216213984865,
+      "online_speedup": 1.140216213984865,
+      "oracle_speedup": 1.2761674387994635,
+      "preset": "default",
+      "trace": "microsoft_phi_3_5_mini_instruct_4bit_ctx256_bs1_phi35_probe.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.218537377641987,
+      "online_speedup": 1.218537377641987,
+      "oracle_speedup": 1.4889334451115555,
+      "preset": "optimistic",
+      "trace": "microsoft_phi_3_5_mini_instruct_4bit_ctx256_bs1_phi35_probe.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0873391897494438,
+      "kv_regime_speedup": 1.0873391897494438,
+      "online_speedup": 1.0873391897494438,
+      "oracle_speedup": 1.1071314219214878,
+      "preset": "conservative",
+      "trace": "microsoft_phi_3_5_mini_instruct_4bit_ctx768_bs1_phi35_probe.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.1751167830166351,
+      "kv_regime_speedup": 1.1751167830166351,
+      "online_speedup": 1.1751167830166351,
+      "oracle_speedup": 1.3285896208060906,
+      "preset": "default",
+      "trace": "microsoft_phi_3_5_mini_instruct_4bit_ctx768_bs1_phi35_probe.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.2470251666473746,
+      "kv_regime_speedup": 1.2470251666473746,
+      "online_speedup": 1.2470251666473746,
+      "oracle_speedup": 1.5500659069355411,
+      "preset": "optimistic",
+      "trace": "microsoft_phi_3_5_mini_instruct_4bit_ctx768_bs1_phi35_probe.jsonl"
+    }
+  ]
+}

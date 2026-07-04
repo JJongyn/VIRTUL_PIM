@@ -1,0 +1,75 @@
+{
+  "batch_size": 1,
+  "device": "cuda:0",
+  "max_new_tokens": 16,
+  "min_offload_bytes": 262144,
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "prompt_tokens_target": 256,
+  "quantization": "4bit",
+  "results": [
+    {
+      "baseline_latency_ms": 15126.265605678782,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "gpu_only",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 15126.265605678782,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15126.265605678782,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.58852384648127,
+      "policy_name": "static_attention",
+      "speedup_vs_gpu_only": 1.145270190015375,
+      "total_latency_ms": 13207.595672664556,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15126.265605678782,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "threshold",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 15126.265605678782,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15126.265605678782,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "online_predictor",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 15126.265605678782,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15126.265605678782,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "adaptive_feature",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 15126.265605678782,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15126.265605678782,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "adaptive_score",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 15126.265605678782,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15126.265605678782,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "oracle",
+      "speedup_vs_gpu_only": 1.2747433893298301,
+      "total_latency_ms": 11866.12594526268,
+      "total_records": 32
+    }
+  ],
+  "trace": "/mnt/2TB_SSD/jongyun_2026/PAPI/artifacts/traces/qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs1_latest_probe.jsonl"
+}

@@ -1,0 +1,31 @@
+\section{Additional Details}
+
+\subsection{Framework Overview}
+
+The end-to-end workflow is: real decode run $\rightarrow$ trace adapter $\rightarrow$ region-level trace $\rightarrow$ virtual PIM replay $\rightarrow$ policy comparison. The framework deliberately separates runtime measurement from the virtual backend so that different cost-model settings can be replayed on the same collected traces.
+
+\subsection{Additional Tables}
+
+The main paper already contains the representative modern-family results table and the family-onset summary table. We do not repeat them here in order to avoid duplicated numbering and cross-reference ambiguity.
+
+\input{tables/final_tables/backend_measured_vs_modeled.tex}
+\input{tables/final_tables/backend_parameters.tex}
+
+\subsection{Robustness Notes}
+
+The sensitivity study changes PIM bandwidth and latency presets while leaving the decode traces fixed. The most robust conclusion is the long-context positive-regime story. Borderline early-onset short-context points are more parameter-sensitive, which is why the main paper phrases them as family-dependent onset evidence rather than as universal short-context gains.
+
+\subsection{Decision-Signal Notes}
+
+The held-out decision-signal study uses workload-level labels derived from whether the realistic online predictor exceeds a $1.05\times$ speedup threshold under the current virtual replay setup. It does not predict real-hardware benefit. Family-held-out evaluation shows that context length is the strongest coarse predictor in the current setup, while attention-only cues are too permissive. Context-bucket-held-out evaluation shows a modest benefit from combining context and KV-related features, which is why the main paper treats KV signals as complementary rather than dominant. Across thresholds from $1.01\times$ to $1.10\times$, the qualitative ordering is unchanged on the current workload set.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/final_figures/paper_backend_validation.pdf}
+    \caption{Appendix robustness view. Left: preset-level positive fractions across conservative/default/optimistic backend settings. Right: first-positive context for representative families across the same presets. Absolute positivity changes, but delayed-onset families remain delayed and early-positive families remain early.}
+    \label{fig:backend-validation}
+\end{figure}
+
+\subsection{Reproducibility}
+
+All main figures in the paper are generated from reproducible scripts and stored under the project \texttt{final/} package. The trace schema, simulator, cost model, and policy implementations are contained in the repository. The paper focuses on runtime-grounded virtual replay rather than private serving traces or proprietary hardware measurements. The main additional analysis artifacts are \texttt{artifacts/reports/BACKEND\_FORMALIZATION.md}, \texttt{artifacts/reports/DECISION\_SIGNAL\_STUDY.md}, \texttt{artifacts/reports/QUANTIZATION\_VARIATION\_REPORT.md}, and \texttt{artifacts/reports/SAME\_CONTEXT\_FAMILY\_REPORT.md}.

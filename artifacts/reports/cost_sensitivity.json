@@ -1,0 +1,196 @@
+{
+  "rows": [
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.0,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.0577542611476407,
+      "preset": "conservative",
+      "trace": "gpt2_none_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.0,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.2694137514962391,
+      "preset": "default",
+      "trace": "gpt2_none_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.0,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.4811348320870128,
+      "preset": "optimistic",
+      "trace": "gpt2_none_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0800292196888963,
+      "kv_regime_speedup": 1.0800292196888963,
+      "online_speedup": 1.0800292196888963,
+      "oracle_speedup": 1.1008850064654452,
+      "preset": "conservative",
+      "trace": "gpt2_none_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.1595543038919014,
+      "kv_regime_speedup": 1.1595543038919014,
+      "online_speedup": 1.1595543038919014,
+      "oracle_speedup": 1.3211632590597244,
+      "preset": "default",
+      "trace": "gpt2_none_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.2239335747497044,
+      "kv_regime_speedup": 1.2239335747497044,
+      "online_speedup": 1.2239335747497044,
+      "oracle_speedup": 1.5414989112952417,
+      "preset": "optimistic",
+      "trace": "gpt2_none_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.0,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.0622601601290327,
+      "preset": "conservative",
+      "trace": "qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.0,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.2747373336872065,
+      "preset": "default",
+      "trace": "qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.0,
+      "online_speedup": 1.0,
+      "oracle_speedup": 1.4872287556410513,
+      "preset": "optimistic",
+      "trace": "qwen_qwen2_5_1_5b_instruct_4bit_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0955669380364985,
+      "kv_regime_speedup": 1.0955669380364985,
+      "online_speedup": 1.0955669380364985,
+      "oracle_speedup": 1.113801690330737,
+      "preset": "conservative",
+      "trace": "qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.1940245403527592,
+      "kv_regime_speedup": 1.1940245403527592,
+      "online_speedup": 1.1940245403527592,
+      "oracle_speedup": 1.3365895216857675,
+      "preset": "default",
+      "trace": "qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.2759314017033971,
+      "kv_regime_speedup": 1.2759314017033971,
+      "online_speedup": 1.2759314017033971,
+      "oracle_speedup": 1.5593929343130752,
+      "preset": "optimistic",
+      "trace": "qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.0487228963962576,
+      "online_speedup": 1.0487228963962576,
+      "oracle_speedup": 1.0641004352737953,
+      "preset": "conservative",
+      "trace": "unsloth_qwen3_8b_unsloth_bnb_4bit_none_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.1555078617796888,
+      "online_speedup": 1.1555078617796888,
+      "oracle_speedup": 1.276935565792697,
+      "preset": "default",
+      "trace": "unsloth_qwen3_8b_unsloth_bnb_4bit_none_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.2461425640100787,
+      "online_speedup": 1.2461425640100787,
+      "oracle_speedup": 1.4897792214871497,
+      "preset": "optimistic",
+      "trace": "unsloth_qwen3_8b_unsloth_bnb_4bit_none_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.095839731898145,
+      "kv_regime_speedup": 1.095839731898145,
+      "online_speedup": 1.095839731898145,
+      "oracle_speedup": 1.1140542373547997,
+      "preset": "conservative",
+      "trace": "unsloth_qwen3_8b_unsloth_bnb_4bit_none_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.1946206714662382,
+      "kv_regime_speedup": 1.1946206714662382,
+      "online_speedup": 1.1946206714662382,
+      "oracle_speedup": 1.3368797329249138,
+      "preset": "default",
+      "trace": "unsloth_qwen3_8b_unsloth_bnb_4bit_none_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.2768331789741068,
+      "kv_regime_speedup": 1.2768331789741068,
+      "online_speedup": 1.2768331789741068,
+      "oracle_speedup": 1.5597135295788962,
+      "preset": "optimistic",
+      "trace": "unsloth_qwen3_8b_unsloth_bnb_4bit_none_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.0462696112205114,
+      "online_speedup": 1.0462696112205114,
+      "oracle_speedup": 1.0626602746400342,
+      "preset": "conservative",
+      "trace": "huggingfacetb_smollm2_1_7b_instruct_4bit_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.146329571799284,
+      "online_speedup": 1.146329571799284,
+      "oracle_speedup": 1.2752216769158145,
+      "preset": "default",
+      "trace": "huggingfacetb_smollm2_1_7b_instruct_4bit_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.0,
+      "kv_regime_speedup": 1.230379851790955,
+      "online_speedup": 1.230379851790955,
+      "oracle_speedup": 1.487799711435627,
+      "preset": "optimistic",
+      "trace": "huggingfacetb_smollm2_1_7b_instruct_4bit_ctx256_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.1015738899069154,
+      "kv_regime_speedup": 1.1015738899069154,
+      "online_speedup": 1.1015738899069154,
+      "oracle_speedup": 1.1188392370526257,
+      "preset": "conservative",
+      "trace": "huggingfacetb_smollm2_1_7b_instruct_4bit_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.2066293645004766,
+      "kv_regime_speedup": 1.2066293645004766,
+      "online_speedup": 1.2066293645004766,
+      "oracle_speedup": 1.342658276031316,
+      "preset": "default",
+      "trace": "huggingfacetb_smollm2_1_7b_instruct_4bit_ctx768_bs1_kvmech.jsonl"
+    },
+    {
+      "adaptive_feature_speedup": 1.2948380166939422,
+      "kv_regime_speedup": 1.2948380166939422,
+      "online_speedup": 1.2948380166939422,
+      "oracle_speedup": 1.5665063295772914,
+      "preset": "optimistic",
+      "trace": "huggingfacetb_smollm2_1_7b_instruct_4bit_ctx768_bs1_kvmech.jsonl"
+    }
+  ]
+}

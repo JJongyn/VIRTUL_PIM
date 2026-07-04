@@ -1,0 +1,74 @@
+{
+  "batch_size": 1,
+  "device": "cpu",
+  "max_new_tokens": 16,
+  "min_offload_bytes": 32768.0,
+  "model": "EleutherAI/pythia-410m",
+  "prompt_tokens_target": 512,
+  "results": [
+    {
+      "baseline_latency_ms": 48259.45094350027,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "gpu_only",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 48259.45094350027,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 48259.45094350027,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.4290909520040358,
+      "policy_name": "static_attention",
+      "speedup_vs_gpu_only": 1.1042860213006236,
+      "total_latency_ms": 43701.94860083485,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 48259.45094350027,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "threshold",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 48259.45094350027,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 48259.45094350027,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.4290909520040358,
+      "policy_name": "online_predictor",
+      "speedup_vs_gpu_only": 1.1042860213006236,
+      "total_latency_ms": 43701.94860083485,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 48259.45094350027,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.4290909520040358,
+      "policy_name": "adaptive_feature",
+      "speedup_vs_gpu_only": 1.1042860213006236,
+      "total_latency_ms": 43701.94860083485,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 48259.45094350027,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "adaptive_score",
+      "speedup_vs_gpu_only": 1.282194942965694,
+      "total_latency_ms": 37638.15417324687,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 48259.45094350027,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "oracle",
+      "speedup_vs_gpu_only": 1.282194942965694,
+      "total_latency_ms": 37638.15417324687,
+      "total_records": 32
+    }
+  ],
+  "trace": "artifacts/traces/EleutherAI_pythia_410m_cpu_ctx512.jsonl"
+}

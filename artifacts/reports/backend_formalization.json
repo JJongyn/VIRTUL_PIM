@@ -1,0 +1,50 @@
+{
+  "calibration_anchor": "The GPU side is anchored to trace-measured kernel latency whenever the trace provides latency_ms; the roofline terms are used only to decompose that measured latency into compute- and memory-dominant shares before applying the virtual PIM scaling.",
+  "effective_modifiers": {
+    "attention_long_context_bw_bonus": 0.2,
+    "fc_parallelism_penalty": 0.25,
+    "non_attention_penalty": 0.1
+  },
+  "gpu_latency_formula": "L_gpu(r) = measured_trace_latency(r) if available, else max(FLOPs/TFLOPS_gpu, Bytes/BW_gpu).",
+  "modeled_only": [
+    "gpu_compute_ms",
+    "gpu_memory_ms",
+    "compute_share",
+    "memory_share",
+    "effective_pim_bw",
+    "effective_pim_tflops",
+    "estimated_pim_latency_ms"
+  ],
+  "parameter_sources": [
+    "GPU roofline anchor (A100 312 TFLOPS / 1935 GB/s) follows the prior-work setup referenced in the code comments and paper discussion of PAPI-style grounding.",
+    "PIM bandwidth is set above the GPU anchor (2400 vs 1935 GB/s) to model a memory-centric accelerator advantage without assuming GPU-class compute throughput.",
+    "PIM throughput is intentionally low (18 TFLOP/s) to encode a conservative memory-centric backend and to avoid overstating gains on compute-dominant regions.",
+    "Attention long-context bandwidth bonus and MLP/non-attention penalties are qualitative priors used to encode the intended memory-vs-compute asymmetry, not hardware-calibrated constants.",
+    "The attention bonus rewards long-context memory sensitivity, while FC and non-attention penalties are deliberately chosen to avoid overestimating benefit outside attention-heavy regions.",
+    "Transfer and sync overheads are explicit constant terms and are varied again in the sensitivity study rather than treated as fixed hardware facts."
+  ],
+  "parameters": {
+    "gpu_peak_bw_gbps": 1935.0,
+    "gpu_peak_tflops": 312.0,
+    "min_offload_bytes": 262144,
+    "pim_peak_bw_gbps": 2400.0,
+    "pim_peak_tflops": 18.0,
+    "sync_overhead_ms": 0.01,
+    "transfer_overhead_ms": 0.02
+  },
+  "pim_latency_formula": "L_pim(r) = max(L_gpu * compute_share * TFLOPS_gpu/TFLOPS_pim_eff, L_gpu * memory_share * BW_gpu/BW_pim_eff) + transfer_overhead + sync_overhead.",
+  "trace_derived": [
+    "bytes_moved",
+    "flops",
+    "arithmetic_intensity",
+    "kv_bytes_est",
+    "kv_bytes_per_token_est",
+    "memory_pressure_proxy"
+  ],
+  "trace_measured": [
+    "latency_ms",
+    "context_len",
+    "batch_size",
+    "region"
+  ]
+}

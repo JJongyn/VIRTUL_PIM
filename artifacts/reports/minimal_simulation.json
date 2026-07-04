@@ -1,0 +1,52 @@
+{
+  "device": "cpu",
+  "model": "sshleifer/tiny-gpt2",
+  "results": [
+    {
+      "baseline_latency_ms": 1.1318327974276527e-06,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "gpu_only",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 1.1318327974276527e-06,
+      "total_records": 16
+    },
+    {
+      "baseline_latency_ms": 1.1318327974276527e-06,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "static_attention",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 1.1318327974276527e-06,
+      "total_records": 16
+    },
+    {
+      "baseline_latency_ms": 1.1318327974276527e-06,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "threshold",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 1.1318327974276527e-06,
+      "total_records": 16
+    },
+    {
+      "baseline_latency_ms": 1.1318327974276527e-06,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "online_predictor",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 1.1318327974276527e-06,
+      "total_records": 16
+    },
+    {
+      "baseline_latency_ms": 1.1318327974276527e-06,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "oracle",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 1.1318327974276527e-06,
+      "total_records": 16
+    }
+  ],
+  "trace": "artifacts/traces/minimal_demo.jsonl"
+}

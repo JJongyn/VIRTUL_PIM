@@ -1,0 +1,14 @@
+# Framework Overview
+
+```mermaid
+flowchart LR
+    A[Real LLM Decode Run] --> B[Trace Adapter]
+    B --> C[Region-Level Trace]
+    C --> D[Trace Analysis]
+    C --> E[Virtual PIM Cost Model]
+    D --> F[Runtime Features\ncontext, bytes, intensity, KV proxy]
+    E --> G[Policy Simulator]
+    F --> G
+    G --> H[Policy Comparison\nGPU-only, static, online, KV-aware, oracle]
+    H --> I[Regime Maps and Mechanism Figures]
+```

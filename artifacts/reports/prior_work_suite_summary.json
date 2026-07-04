@@ -1,0 +1,106 @@
+{
+  "adaptive_beats_online": 7,
+  "adaptive_matches_oracle": 7,
+  "num_reports": 9,
+  "rows": [
+    {
+      "adaptive_gap_closed": 0.0,
+      "adaptive_score": 1.0,
+      "gpu_only": 1.0,
+      "online_gap_closed": 0.0,
+      "online_predictor": 1.0,
+      "oracle": 1.2674816245401324,
+      "report": "artifacts/reports/gpt2_ctx256_simulation_prior_work.json",
+      "tag": "gpt2_ctx256",
+      "trace": "artifacts/traces/gpt2_ctx256.jsonl"
+    },
+    {
+      "adaptive_gap_closed": 1.0,
+      "adaptive_score": 1.2956462385945058,
+      "gpu_only": 1.0,
+      "online_gap_closed": 0.5361721697444785,
+      "online_predictor": 1.1394013271354655,
+      "oracle": 1.2956462385945058,
+      "report": "artifacts/reports/gpt2_ctx512_simulation_prior_work.json",
+      "tag": "gpt2_ctx512",
+      "trace": "artifacts/traces/gpt2_ctx512.jsonl"
+    },
+    {
+      "adaptive_gap_closed": 1.0,
+      "adaptive_score": 1.3196933825239312,
+      "gpu_only": 1.0,
+      "online_gap_closed": 0.5594179128180408,
+      "online_predictor": 1.1567620810533978,
+      "oracle": 1.3196933825239312,
+      "report": "artifacts/reports/gpt2_ctx768_simulation_prior_work.json",
+      "tag": "gpt2_ctx768",
+      "trace": "artifacts/traces/gpt2_ctx768.jsonl"
+    },
+    {
+      "adaptive_gap_closed": 1.0,
+      "adaptive_score": 1.3345270989254765,
+      "gpu_only": 1.0,
+      "online_gap_closed": 0.5630023396331136,
+      "online_predictor": 1.164318254717458,
+      "oracle": 1.3345270989254765,
+      "report": "artifacts/reports/gpt2_ctx960_simulation_prior_work.json",
+      "tag": "gpt2_ctx960",
+      "trace": "artifacts/traces/gpt2_ctx960.jsonl"
+    },
+    {
+      "adaptive_gap_closed": 1.0,
+      "adaptive_score": 1.2945497989723476,
+      "gpu_only": 1.0,
+      "online_gap_closed": 0.5275926402656913,
+      "online_predictor": 1.1364198289562446,
+      "oracle": 1.2945497989723476,
+      "report": "artifacts/reports/gpt2_ctx512_bs4_simulation_prior_work.json",
+      "tag": "gpt2_ctx512_bs4",
+      "trace": "artifacts/traces/gpt2_ctx512_bs4.jsonl"
+    },
+    {
+      "adaptive_gap_closed": 0.0,
+      "adaptive_score": 1.0,
+      "gpu_only": 1.0,
+      "online_gap_closed": 0.0,
+      "online_predictor": 1.0,
+      "oracle": 1.2820222908642418,
+      "report": "artifacts/reports/opt125m_ctx256_simulation_prior_work.json",
+      "tag": "opt125m_ctx256",
+      "trace": "artifacts/traces/facebook_opt_125m_ctx256.jsonl"
+    },
+    {
+      "adaptive_gap_closed": 1.0,
+      "adaptive_score": 1.3233274877398342,
+      "gpu_only": 1.0,
+      "online_gap_closed": 0.7362476391432776,
+      "online_predictor": 1.2193438127048093,
+      "oracle": 1.3233274877398342,
+      "report": "artifacts/reports/opt125m_ctx512_simulation_prior_work.json",
+      "tag": "opt125m_ctx512",
+      "trace": "artifacts/traces/facebook_opt_125m_ctx512.jsonl"
+    },
+    {
+      "adaptive_gap_closed": 1.0,
+      "adaptive_score": 1.3547292528225479,
+      "gpu_only": 1.0,
+      "online_gap_closed": 0.727887356195678,
+      "online_predictor": 1.2354735445127853,
+      "oracle": 1.3547292528225479,
+      "report": "artifacts/reports/opt125m_ctx768_simulation_prior_work.json",
+      "tag": "opt125m_ctx768",
+      "trace": "artifacts/traces/facebook_opt_125m_ctx768.jsonl"
+    },
+    {
+      "adaptive_gap_closed": 1.0,
+      "adaptive_score": 1.3060748410637222,
+      "gpu_only": 1.0,
+      "online_gap_closed": 0.6196046310814258,
+      "online_predictor": 1.1698677768010664,
+      "oracle": 1.3060748410637222,
+      "report": "artifacts/reports/opt125m_ctx512_bs4_simulation_prior_work.json",
+      "tag": "opt125m_ctx512_bs4",
+      "trace": "artifacts/traces/facebook_opt_125m_ctx512_bs4.jsonl"
+    }
+  ]
+}

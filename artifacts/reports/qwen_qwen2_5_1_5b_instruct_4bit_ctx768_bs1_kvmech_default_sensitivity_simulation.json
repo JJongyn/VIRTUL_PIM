@@ -1,0 +1,94 @@
+{
+  "config": {
+    "min_offload_bytes": 32768.0,
+    "pim_bw_gbps": 2400.0,
+    "pim_tflops": 18.0,
+    "sync_overhead_ms": 0.01,
+    "transfer_overhead_ms": 0.02
+  },
+  "num_records": 32,
+  "results": [
+    {
+      "baseline_latency_ms": 15594.509422313422,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "gpu_only",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 15594.509422313422,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15594.509422313422,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6452691031832876,
+      "policy_name": "static_attention",
+      "speedup_vs_gpu_only": 1.1940245403527592,
+      "total_latency_ms": 13060.459726988714,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15594.509422313422,
+      "dispatches_to_pim": 0,
+      "oracle_gap_closed": 0.0,
+      "policy_name": "threshold",
+      "speedup_vs_gpu_only": 1.0,
+      "total_latency_ms": 15594.509422313422,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15594.509422313422,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6452691031832876,
+      "policy_name": "online_predictor",
+      "speedup_vs_gpu_only": 1.1940245403527592,
+      "total_latency_ms": 13060.459726988714,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15594.509422313422,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6452691031832876,
+      "policy_name": "adaptive_feature",
+      "speedup_vs_gpu_only": 1.1940245403527592,
+      "total_latency_ms": 13060.459726988714,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15594.509422313422,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6452691031832876,
+      "policy_name": "kv_regime",
+      "speedup_vs_gpu_only": 1.1940245403527592,
+      "total_latency_ms": 13060.459726988714,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15594.509422313422,
+      "dispatches_to_pim": 16,
+      "oracle_gap_closed": 0.6452691031832876,
+      "policy_name": "adaptive_family",
+      "speedup_vs_gpu_only": 1.1940245403527592,
+      "total_latency_ms": 13060.459726988714,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15594.509422313422,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "adaptive_score",
+      "speedup_vs_gpu_only": 1.3365895216857675,
+      "total_latency_ms": 11667.388655452662,
+      "total_records": 32
+    },
+    {
+      "baseline_latency_ms": 15594.509422313422,
+      "dispatches_to_pim": 32,
+      "oracle_gap_closed": 1.0,
+      "policy_name": "oracle",
+      "speedup_vs_gpu_only": 1.3365895216857675,
+      "total_latency_ms": 11667.388655452662,
+      "total_records": 32
+    }
+  ],
+  "trace": "artifacts/traces/qwen_qwen2_5_1_5b_instruct_4bit_ctx768_bs1_kvmech.jsonl"
+}

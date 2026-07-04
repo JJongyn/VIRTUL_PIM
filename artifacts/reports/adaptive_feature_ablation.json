@@ -1,0 +1,340 @@
+{
+  "rows": [
+    {
+      "ablation": "full",
+      "gap_closed": 0.5361721697444785,
+      "oracle_speedup": 1.2956462385945058,
+      "speedup": 1.1394013271354655,
+      "trace_tag": "cpu_gpt2_512"
+    },
+    {
+      "ablation": "no_memory_pressure",
+      "gap_closed": 0.5361721697444785,
+      "oracle_speedup": 1.2956462385945058,
+      "speedup": 1.1394013271354655,
+      "trace_tag": "cpu_gpt2_512"
+    },
+    {
+      "ablation": "no_context",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2956462385945058,
+      "speedup": 1.0,
+      "trace_tag": "cpu_gpt2_512"
+    },
+    {
+      "ablation": "no_batch",
+      "gap_closed": 0.5361721697444785,
+      "oracle_speedup": 1.2956462385945058,
+      "speedup": 1.1394013271354655,
+      "trace_tag": "cpu_gpt2_512"
+    },
+    {
+      "ablation": "no_bytes",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2956462385945058,
+      "speedup": 1.0,
+      "trace_tag": "cpu_gpt2_512"
+    },
+    {
+      "ablation": "no_intensity",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2956462385945058,
+      "speedup": 1.0,
+      "trace_tag": "cpu_gpt2_512"
+    },
+    {
+      "ablation": "no_latency",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2956462385945058,
+      "speedup": 1.0,
+      "trace_tag": "cpu_gpt2_512"
+    },
+    {
+      "ablation": "no_region_bias",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2956462385945058,
+      "speedup": 1.0,
+      "trace_tag": "cpu_gpt2_512"
+    },
+    {
+      "ablation": "full",
+      "gap_closed": 0.5630023396331136,
+      "oracle_speedup": 1.3345270989254765,
+      "speedup": 1.164318254717458,
+      "trace_tag": "cpu_gpt2_960"
+    },
+    {
+      "ablation": "no_memory_pressure",
+      "gap_closed": 0.5630023396331136,
+      "oracle_speedup": 1.3345270989254765,
+      "speedup": 1.164318254717458,
+      "trace_tag": "cpu_gpt2_960"
+    },
+    {
+      "ablation": "no_context",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3345270989254765,
+      "speedup": 1.0,
+      "trace_tag": "cpu_gpt2_960"
+    },
+    {
+      "ablation": "no_batch",
+      "gap_closed": 0.5630023396331136,
+      "oracle_speedup": 1.3345270989254765,
+      "speedup": 1.164318254717458,
+      "trace_tag": "cpu_gpt2_960"
+    },
+    {
+      "ablation": "no_bytes",
+      "gap_closed": 0.5630023396331136,
+      "oracle_speedup": 1.3345270989254765,
+      "speedup": 1.164318254717458,
+      "trace_tag": "cpu_gpt2_960"
+    },
+    {
+      "ablation": "no_intensity",
+      "gap_closed": 0.5630023396331136,
+      "oracle_speedup": 1.3345270989254765,
+      "speedup": 1.164318254717458,
+      "trace_tag": "cpu_gpt2_960"
+    },
+    {
+      "ablation": "no_latency",
+      "gap_closed": 0.5630023396331136,
+      "oracle_speedup": 1.3345270989254765,
+      "speedup": 1.164318254717458,
+      "trace_tag": "cpu_gpt2_960"
+    },
+    {
+      "ablation": "no_region_bias",
+      "gap_closed": 0.5630023396331136,
+      "oracle_speedup": 1.3345270989254765,
+      "speedup": 1.164318254717458,
+      "trace_tag": "cpu_gpt2_960"
+    },
+    {
+      "ablation": "full",
+      "gap_closed": 0.7362476391432776,
+      "oracle_speedup": 1.3233274877398342,
+      "speedup": 1.2193438127048093,
+      "trace_tag": "cpu_opt125m_512"
+    },
+    {
+      "ablation": "no_memory_pressure",
+      "gap_closed": 0.7362476391432776,
+      "oracle_speedup": 1.3233274877398342,
+      "speedup": 1.2193438127048093,
+      "trace_tag": "cpu_opt125m_512"
+    },
+    {
+      "ablation": "no_context",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3233274877398342,
+      "speedup": 1.0,
+      "trace_tag": "cpu_opt125m_512"
+    },
+    {
+      "ablation": "no_batch",
+      "gap_closed": 0.7362476391432776,
+      "oracle_speedup": 1.3233274877398342,
+      "speedup": 1.2193438127048093,
+      "trace_tag": "cpu_opt125m_512"
+    },
+    {
+      "ablation": "no_bytes",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3233274877398342,
+      "speedup": 1.0,
+      "trace_tag": "cpu_opt125m_512"
+    },
+    {
+      "ablation": "no_intensity",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3233274877398342,
+      "speedup": 1.0,
+      "trace_tag": "cpu_opt125m_512"
+    },
+    {
+      "ablation": "no_latency",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3233274877398342,
+      "speedup": 1.0,
+      "trace_tag": "cpu_opt125m_512"
+    },
+    {
+      "ablation": "no_region_bias",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3233274877398342,
+      "speedup": 1.0,
+      "trace_tag": "cpu_opt125m_512"
+    },
+    {
+      "ablation": "full",
+      "gap_closed": 0.5371707107116919,
+      "oracle_speedup": 1.2964232555991906,
+      "speedup": 1.1400200667907048,
+      "trace_tag": "gpu_gpt2_512"
+    },
+    {
+      "ablation": "no_memory_pressure",
+      "gap_closed": 0.5268762522613126,
+      "oracle_speedup": 1.2964232555991906,
+      "speedup": 1.136969151550347,
+      "trace_tag": "gpu_gpt2_512"
+    },
+    {
+      "ablation": "no_context",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2964232555991906,
+      "speedup": 1.0,
+      "trace_tag": "gpu_gpt2_512"
+    },
+    {
+      "ablation": "no_batch",
+      "gap_closed": 0.5268762522613126,
+      "oracle_speedup": 1.2964232555991906,
+      "speedup": 1.136969151550347,
+      "trace_tag": "gpu_gpt2_512"
+    },
+    {
+      "ablation": "no_bytes",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2964232555991906,
+      "speedup": 1.0,
+      "trace_tag": "gpu_gpt2_512"
+    },
+    {
+      "ablation": "no_intensity",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2964232555991906,
+      "speedup": 1.0,
+      "trace_tag": "gpu_gpt2_512"
+    },
+    {
+      "ablation": "no_latency",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2964232555991906,
+      "speedup": 1.0,
+      "trace_tag": "gpu_gpt2_512"
+    },
+    {
+      "ablation": "no_region_bias",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.2964232555991906,
+      "speedup": 1.0,
+      "trace_tag": "gpu_gpt2_512"
+    },
+    {
+      "ablation": "full",
+      "gap_closed": 0.5918212072168908,
+      "oracle_speedup": 1.3408975250657695,
+      "speedup": 1.1771065191617327,
+      "trace_tag": "gpu_gpt2_960"
+    },
+    {
+      "ablation": "no_memory_pressure",
+      "gap_closed": 0.5918212072168908,
+      "oracle_speedup": 1.3408975250657695,
+      "speedup": 1.1771065191617327,
+      "trace_tag": "gpu_gpt2_960"
+    },
+    {
+      "ablation": "no_context",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3408975250657695,
+      "speedup": 1.0,
+      "trace_tag": "gpu_gpt2_960"
+    },
+    {
+      "ablation": "no_batch",
+      "gap_closed": 0.5918212072168908,
+      "oracle_speedup": 1.3408975250657695,
+      "speedup": 1.1771065191617327,
+      "trace_tag": "gpu_gpt2_960"
+    },
+    {
+      "ablation": "no_bytes",
+      "gap_closed": 0.5918212072168908,
+      "oracle_speedup": 1.3408975250657695,
+      "speedup": 1.1771065191617327,
+      "trace_tag": "gpu_gpt2_960"
+    },
+    {
+      "ablation": "no_intensity",
+      "gap_closed": 0.5918212072168908,
+      "oracle_speedup": 1.3408975250657695,
+      "speedup": 1.1771065191617327,
+      "trace_tag": "gpu_gpt2_960"
+    },
+    {
+      "ablation": "no_latency",
+      "gap_closed": 0.5918212072168908,
+      "oracle_speedup": 1.3408975250657695,
+      "speedup": 1.1771065191617327,
+      "trace_tag": "gpu_gpt2_960"
+    },
+    {
+      "ablation": "no_region_bias",
+      "gap_closed": 0.5437949531772595,
+      "oracle_speedup": 1.3408975250657695,
+      "speedup": 1.16042862660538,
+      "trace_tag": "gpu_gpt2_960"
+    },
+    {
+      "ablation": "full",
+      "gap_closed": 0.8862881809197003,
+      "oracle_speedup": 1.3475922080316245,
+      "speedup": 1.2963533963342122,
+      "trace_tag": "gpu_opt125m_512"
+    },
+    {
+      "ablation": "no_memory_pressure",
+      "gap_closed": 0.8862881809197003,
+      "oracle_speedup": 1.3475922080316245,
+      "speedup": 1.2963533963342122,
+      "trace_tag": "gpu_opt125m_512"
+    },
+    {
+      "ablation": "no_context",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3475922080316245,
+      "speedup": 1.0,
+      "trace_tag": "gpu_opt125m_512"
+    },
+    {
+      "ablation": "no_batch",
+      "gap_closed": 0.8862881809197003,
+      "oracle_speedup": 1.3475922080316245,
+      "speedup": 1.2963533963342122,
+      "trace_tag": "gpu_opt125m_512"
+    },
+    {
+      "ablation": "no_bytes",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3475922080316245,
+      "speedup": 1.0,
+      "trace_tag": "gpu_opt125m_512"
+    },
+    {
+      "ablation": "no_intensity",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3475922080316245,
+      "speedup": 1.0,
+      "trace_tag": "gpu_opt125m_512"
+    },
+    {
+      "ablation": "no_latency",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3475922080316245,
+      "speedup": 1.0,
+      "trace_tag": "gpu_opt125m_512"
+    },
+    {
+      "ablation": "no_region_bias",
+      "gap_closed": 0.0,
+      "oracle_speedup": 1.3475922080316245,
+      "speedup": 1.0,
+      "trace_tag": "gpu_opt125m_512"
+    }
+  ]
+}

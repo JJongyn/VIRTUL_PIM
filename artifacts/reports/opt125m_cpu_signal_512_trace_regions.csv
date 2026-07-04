@@ -1,0 +1,3 @@
+region,count,latency_ms,latency_share,bytes_moved,flops,arithmetic_intensity
+attention,32,7674.202802008949,1.0,53133312.0,53035008.0,0.9981498612395929
+mlp,32,0.0,0.0,302284800.0,301989888.0,0.9990243902439024

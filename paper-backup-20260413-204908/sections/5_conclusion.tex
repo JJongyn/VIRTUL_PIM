@@ -1,0 +1,8 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We presented a trace-driven framework for studying virtual PIM decision signals during LLM decoding and used it to characterize when offload value appears. The main conclusion is not that PIM-style offloading always helps, but that it becomes worthwhile only after the decode stream enters the right operating regime. In our current experiments, context length is the clearest coarse regime-entry variable, the onset is model-family dependent, and the transition is more consistent with rising KV-cache pressure than with static attention labels alone. KV-aware features therefore look useful as complementary decision signals, especially near early-positive boundary cases.
+
+The project has important limitations. Our backend is prior-work-grounded but still virtual rather than cycle-accurate, so we do not claim real hardware speedups. Our traces come from open-source runtimes rather than production serving engines, and our model set, while broader than the initial study, still does not cover very large serving-scale models. We therefore view the paper as an empirical characterization study rather than a final accelerator or scheduler paper.
+
+The most useful next steps are to add a stronger runtime-diversity check, obtain at least one hardware or emulation anchor point for the virtual backend, and test whether the family-dependent onset patterns persist under broader serving conditions such as continuous batching.

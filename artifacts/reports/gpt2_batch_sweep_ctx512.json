@@ -1,0 +1,50 @@
+{
+  "batches": [
+    1,
+    2,
+    4
+  ],
+  "context": 512,
+  "model": "gpt2",
+  "rows": [
+    {
+      "attention_share": 0.48624708563380176,
+      "batch_size": 1,
+      "context": 512,
+      "mlp_share": 0.5137529143661982,
+      "model": "gpt2",
+      "online_gap_closed": 0.48624100579374874,
+      "online_predictor_speedup": 1.2064497361351303,
+      "oracle_speedup": 1.543037842940771,
+      "simulation": "artifacts/reports/gpt2_ctx512_bs1_simulation.json",
+      "static_attention_speedup": 1.2064497361351303,
+      "trace_summary": "artifacts/reports/gpt2_ctx512_bs1_trace_summary.json"
+    },
+    {
+      "attention_share": 0.4833986950593028,
+      "batch_size": 2,
+      "context": 512,
+      "mlp_share": 0.5166013049406972,
+      "model": "gpt2",
+      "online_gap_closed": 0.48339246372527195,
+      "online_predictor_speedup": 1.2050088425316017,
+      "oracle_speedup": 1.5430937342467264,
+      "simulation": "artifacts/reports/gpt2_ctx512_bs2_simulation.json",
+      "static_attention_speedup": 1.2050088425316017,
+      "trace_summary": "artifacts/reports/gpt2_ctx512_bs2_trace_summary.json"
+    },
+    {
+      "attention_share": 0.4449871566400741,
+      "batch_size": 4,
+      "context": 512,
+      "mlp_share": 0.5550128433599258,
+      "model": "gpt2",
+      "online_gap_closed": 0.44497259985537446,
+      "online_predictor_speedup": 1.1857135628443347,
+      "oracle_speedup": 1.5431865245492944,
+      "simulation": "artifacts/reports/gpt2_ctx512_bs4_simulation.json",
+      "static_attention_speedup": 1.1857135628443347,
+      "trace_summary": "artifacts/reports/gpt2_ctx512_bs4_trace_summary.json"
+    }
+  ]
+}

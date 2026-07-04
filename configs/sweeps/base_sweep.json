@@ -1,0 +1,18 @@
+{
+  "description": "Pre-run profiling sweep for the first PAPI virtual scheduler study",
+  "batches": [1, 2, 4, 8],
+  "contexts": [512, 2048, 8192],
+  "generated_lengths": [128, 512],
+  "required_reports": [
+    "trace_summary.json",
+    "trace_regions.csv",
+    "simulation_report.json"
+  ],
+  "policies": [
+    "gpu_only",
+    "static_attention",
+    "threshold",
+    "online_predictor",
+    "oracle"
+  ]
+}
